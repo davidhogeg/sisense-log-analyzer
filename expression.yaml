@@ -1,0 +1,88 @@
+#Timestamp:
+#  Timestamp_1:
+#    Expression: (\d{4})-(\d{2})-(\d{2})T\(d{2}):(\d{2}):(\d{2})\.(\d{3})
+#    Matches: 2021-02-18T06:15:03.726
+#    Non-Matches: 2021-2-18 06:15:03.726 | 2021/2/18 06:15:03.726
+#    Groups:
+#      - Year
+#      - Month
+#      - Day
+#      - Hour
+#      - Minute
+#      - Second
+#      - Millisecond
+
+Rest:
+  Basic Rest:
+    Expression: (.*)
+    Matches: ','
+    Non-Matches: ','
+    Groups:
+      - Rest
+
+REST_Request:
+  Basic REST:
+    Expression: (Start|Finish).*\s=>\s([A-Z]*)\s(\/.*)
+    Matches: ','
+    Non-Matches: ','
+    Groups:
+      - Start_Finish
+      - Req_Type
+      - Endpoint
+
+X_req:
+  Basic X_req:
+    Expression: X-request:([a-z0-9-]*)
+    Matches: ','
+    Non-Matches: ','
+    Groups:
+      - X_req
+
+Monitor_Info:
+  Basic Monitor_Info:
+    Expression: .*,\s({.*})
+#    Expression: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3})
+    Matches: ','
+    Non-Matches: ','
+    Groups:
+      - Monitor_Info
+
+Timestamp:
+  Timestamp_1:
+    Expression: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3})
+    Matches: 2021-02-18T06:15:03.726
+    Non-Matches: 2021-2-18 06:15:03.726 | 2021/2/18 06:15:03.726
+    Groups:
+      - Timestamp
+
+Namespace:
+  Basic Namespace:
+    Expression: (\w+)
+    Matches: sisense
+    Non-Matches:
+    Groups:
+      - Namespace
+
+Service:
+  Basic Service:
+    Expression: (ai-integration|analyticalengine|api-gateway|blox|build|con-[a-zA-Z0-9_\\-]*|configuration|connectors|droppy|ec-[a-zA-Z0-9_\\-]*|galaxy|grafana|grafana-sc-dashboard|identity|init-zookeeper|intelligence|jobs|knowledgegraph|management|model-graphql|model-logspersistence|mongod-container|monitoring|oxygen|pivot2-be|plugins|query|query-proxy|quest|reporting|storage|tracking|translation|usage)
+    Matches: api-gateway | galaxy
+    Non-Matches: sisense
+    Groups:
+      - Service
+
+#X_Request:
+#  x_request:
+#    Expression: ([a-z0-9-]*)
+#    Matches: X-request:c88aaf52-027f-429a-8cee-1c8072cd7569
+#    Non-Matches: X-req=c88aaf52-027f-429a-8cee-1c8072cd7569
+#    Groups:
+#      - X_Req
+
+Monitor Info:
+  Basic Monitor Info:
+    Expression: ({.*})
+    Matches: {"name":"api-gateway","environment":"production"}
+    Non-Matches: "name: api-gateway"
+    Groups:
+      - Mon_Info

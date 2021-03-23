@@ -1,0 +1,50 @@
+{
+   "id":"LogAnalyzerNotebook",
+   "displayName":"LogAnalyzerNotebook",
+   "codePath":"/work/storage_notebooks/custom_code_notebooks/notebooks/LogAnalyzerNotebook/LogAnalyzerNotebook.ipynb",
+   "description":"",
+   "group":"",
+   "icon":"",
+   "cellsDisable":[
+      0
+   ],
+   "additionalParameters":[
+   ],
+   "columns":[
+{"type": 18, "id": "TIMESTAMP", "name": "TIMESTAMP"},
+{"type": 18, "id": "NAMESPACE", "name": "NAMESPACE"},
+{"type": 18, "id": "SERVICE", "name": "SERVICE"},
+{"type": 18, "id": "NUM", "name": "NUM"},
+{"type": 18, "id": "TYPE", "name": "TYPE"},
+{"type": 18, "id": "X_REQUEST", "name": "X_REQUEST"},
+{"type": 18, "id": "MSG", "name": "MSG"},
+{"type": 18, "id": "NAME", "name": "NAME"},
+{"type": 18, "id": "ENVIRONMENT", "name": "ENVIRONMENT"},
+{"type": 18, "id": "STREAMASJSON", "name": "STREAMASJSON"},
+{"type": 18, "id": "HOSTNAME", "name": "HOSTNAME"},
+{"type": 0, "id": "PID", "name": "PID"},
+{"type": 18, "id": "CHAININGTHREADS", "name": "CHAININGTHREADS"},
+{"type": 18, "id": "THREADNAME", "name": "THREADNAME"},
+{"type": 0, "id": "LEVEL", "name": "LEVEL"},
+{"type": 0, "id": "DURATIONMS", "name": "DURATIONMS"},
+{"type": 18, "id": "PATH", "name": "PATH"},
+{"type": 0, "id": "STATUSCODE", "name": "STATUSCODE"},
+{"type": 18, "id": "CS-METHOD", "name": "CS-METHOD"},
+{"type": 18, "id": "LOG_MESSAGE", "name": "LOG_MESSAGE"},
+{"type": 18, "id": "MSG_1", "name": "MSG_1"},
+{"type": 18, "id": "TIME", "name": "TIME"},
+{"type": 18, "id": "SRC", "name": "SRC"},
+{"type": 18, "id": "V", "name": "V"},
+{"type": 18, "id": "ENTRYTYPE", "name": "ENTRYTYPE"},
+{"type": 18, "id": "LOG_TYPE", "name": "LOG_TYPE"},
+{"type": 18, "id": "LOG_COMPONENT", "name": "LOG_COMPONENT"},
+{"type": 18, "id": "LOG_DATETIME", "name": "LOG_DATETIME"},
+{"type": 6, "id": "MS_TIMESTAMP", "name": "MS_TIMESTAMP"}
+
+   ],
+   "isActive":true,
+   "isSystem":true,
+   "language":"Python",
+   "mode":"Full",
+   "serverUrl":"diagnostics.sisense:8888"
+}

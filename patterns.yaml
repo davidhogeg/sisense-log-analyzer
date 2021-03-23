@@ -1,0 +1,8 @@
+Monitor Entry:
+  Pattern: <Timestamp> [\s|,]* <Namespace> [\s|,]* <Service>.*\[MONITOR\] .* \[<X_req>\] .*[\s|,]* <Monitor_Info>
+  Order: 2
+
+Info Entry:
+#  Pattern: <Timestamp> [\s|,]* <Namespace> [\s|,]* <Service>.*\[INFO\] .* \[<X_req>\] .*\[ <REST_Request> \]
+  Pattern: <Timestamp> [\s|,]* <Namespace> [\s|,]* <Service>.*\[INFO\] .* \[<X_req>\] .* \[<REST_Request>\]
+  Order: 1
